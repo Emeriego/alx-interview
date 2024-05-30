@@ -1,0 +1,2 @@
+Pascals triangle- alx interview.
+
