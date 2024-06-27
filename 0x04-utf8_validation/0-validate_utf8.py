@@ -30,10 +30,3 @@ def validUTF8(data):
             n_bytes -= 1
 
     return n_bytes == 0
-
-# Example usage
-data = [197, 130, 1]  # Valid UTF-8
-print(validUTF8(data))  # True
-
-data = [235, 140, 4]  # Invalid UTF-8
-print(validUTF8(data))  # False
