@@ -3,7 +3,6 @@ const request = require('request');
 const movieId = process.argv[2];
 const apiUrl = 'https://swapi-api.hbtn.io/api/films/';
 
-// Fetching the movie details by ID
 request(`${apiUrl}${movieId}`, function (error, response, body) {
   if (!error && response.statusCode === 200) {
     const characters = JSON.parse(body).characters;
@@ -13,7 +12,6 @@ request(`${apiUrl}${movieId}`, function (error, response, body) {
   }
 });
 
-// Recursive function to print character names
 function printCharacters(characters, index) {
   if (index < characters.length) {
     request(characters[index], function (error, response, body) {
